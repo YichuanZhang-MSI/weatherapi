@@ -39,12 +39,12 @@
     	// Right now I have it set to Chicago.  The default should be Ann Abor/Fahreheit.
     	var query = "https://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q=Ann%20Arbor";
 		if($("input[id=location]").val()){
-			query = "http://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q="+ $("input[id=location]").val();
+			query = "https://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q="+ $("input[id=location]").val();
 			$.ajax({
 				url:query,
 				error: function(result){
 					alert("Please enter a valid city name.");
-					query = "http://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q=Ann%20Arbor";
+					query = "https://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q=Ann%20Arbor";
 					console.log(query);
 				}
 			});
@@ -69,7 +69,7 @@
 			success: function(result){
 				console.log(result);
 				$("#forecast").css("display","grid");
-				$("#tempImg").attr("src","http://openweathermap.org/img/wn/"+result.weather[0].icon+"@2x.png");
+				$("#tempImg").attr("src","https://openweathermap.org/img/wn/"+result.weather[0].icon+"@2x.png");
 				$("#tempImg").attr("alt",result.weather[0].description);
 				$("#loc").html(result.name);
 				$("#temp").html(result.main.temp);
