@@ -37,7 +37,7 @@
     	// You will need to update this query with the city, weather format (Celsius or Fahrenheit) and your OpenWeatherMap ID
     	 
     	// Right now I have it set to Chicago.  The default should be Ann Abor/Fahreheit.
-    	var query = "http://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q=Ann%20Arbor";
+    	var query = "https://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q=Ann%20Arbor";
 		if($("input[id=location]").val()){
 			query = "http://api.openweathermap.org/data/2.5/weather?APPID=0d10ef1277c544c878acd990c0e32650&q="+ $("input[id=location]").val();
 			$.ajax({
